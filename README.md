@@ -74,11 +74,16 @@ df.cache()
 df.count()  # Action to trigger the caching
 persist()
 Customizable Storage Levels: persist() allows you to specify different storage levels, such as storing data in memory, on disk, or both, and whether to use serialization.
+
 Storage Levels:
 MEMORY_ONLY: Store in memory (default for cache()).
+
 MEMORY_AND_DISK: Store in memory and spill to disk if there is not enough memory.
+
 MEMORY_ONLY_SER: Store in memory with serialization.
+
 MEMORY_AND_DISK_SER: Store in memory with serialization and spill to disk if needed.
+
 DISK_ONLY: Store only on disk.
 OFF_HEAP: Store in off-heap memory (requires special configuration).
 
