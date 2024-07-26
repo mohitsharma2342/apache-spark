@@ -61,7 +61,7 @@ Broadcast Hash Join:
 Description: Similar to broadcast join, but specifically when the smaller DataFrame is broadcast and a hash table is built on the join key.
 Usage: This is automatically chosen by Spark when the smaller DataFrame is small enough to be broadcasted and a hash join is preferred.
 
-**#Cache vs persist**
+# Cache vs persist
 In Apache Spark, both cache() and persist() are used to store DataFrames or RDDs in memory to speed up future computations. While they serve similar purposes, there are key differences in their usage and functionality.
 
 cache()
@@ -82,7 +82,7 @@ MEMORY_AND_DISK_SER: Store in memory with serialization and spill to disk if nee
 DISK_ONLY: Store only on disk.
 OFF_HEAP: Store in off-heap memory (requires special configuration).
 
-
+# Partitioning and Bucketing
 Partitioning: Divides data into partitions based on the values of one or more columns. Useful for improving query performance by skipping entire partitions.
 Bucketing: Divides data into a fixed number of buckets based on the hash of a column. Useful for efficient joins and aggregations. by ensuring that the data in each bucket is evenly distributed and easily accessible.
 Combining Both: Can be used together to optimize data storage and query performance even further.
