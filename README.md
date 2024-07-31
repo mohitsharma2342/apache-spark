@@ -15,6 +15,8 @@ instead of reading and wrinting data repeatedly from  disk ,Spark processes the 
 in memory data processing of data makes sparks 100x faster then hadoop 
 And also comes with different components .
 
+https://youtube.com/shorts/wxzYJTNK878?si=FaTpyvicwWLjFEoU
+
 Apark works on master slave architecture so basically Apache spark manages and cordinates the execution of tasks on data across a called cluster manager
 So whenever we write any code in spark its called Spark application whenever we run anything it goes to cluster manager which grants resoureces to all applications 
 
