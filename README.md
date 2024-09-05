@@ -102,3 +102,19 @@ df.write.partitionBy("department").bucketBy(4, "id").sortBy("name").saveAsTable(
 Executor Memomry 
   Suppose we have give 10gb to executor so it 10% to memoery to memoryOverhead 
    so 10% of 10gb is 1gb 
+
+
+Lineage Graph:-
+A lineage graph is a visual representation of the data flow and transformations across systems or processes. 
+It is commonly used in data management and analytics to track the origin, transformations, and destinations of data as it moves through various stages. 
+Lineage graphs help to understand how data is produced, modified, and consumed, providing transparency and traceability.
+-lineage graphs show relationships between data sources, intermediate processes, and final outputs, making it easier to:
+
+
+In Spark, when you perform operations on an RDD (Resilient Distributed Dataset), Spark does not execute them immediately. Instead, it builds a DAG (Directed Acyclic Graph) of transformations.
+Lineage graph in Spark is the logical representation of the transformations applied to RDDs.
+It helps with fault tolerance, as Spark can recompute lost data based on lineage.
+The DAG of operations is used by Spark to optimize execution and recover from failures.
+
+When an action like collect(), save(), or count() is called, Spark submits the DAG to the DAG Scheduler to execute the tasks in the correct order.
+Spark can recover from node failures by recomputing lost partitions using the lineage information, instead of reloading the entire dataset from scratch.
